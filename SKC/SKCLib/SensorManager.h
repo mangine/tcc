@@ -7,6 +7,7 @@
 #include <boost/asio/io_service.hpp>
 #include <boost/atomic.hpp>
 
+#include "InlineHelper.h"
 #include "InterruptableThread.h"
 #include "IRestRequest.h"
 #include "SensorBehavior.h"
@@ -66,7 +67,7 @@ public:
 
         Sensor s;
         s._gs = ptr;
-        s._lastRun = boost::posix_time::neg_infin;
+        s._lastRun = InlineHelper::GetTime(); //boost::posix_time::neg_infin;
         s._unresponsiveTime = boost::posix_time::pos_infin;
         s._status = SensorStatus::undefined;
 

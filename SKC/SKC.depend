@@ -7758,12 +7758,13 @@
 	<boost/atomic.hpp>
 	<vector>
 
-1449165783 /home/manini/Documents/SKC/SKC/SKCLib/SensorManager.h
+1449246323 /home/manini/Documents/SKC/SKC/SKCLib/SensorManager.h
 	<vector>
 	<boost/lockfree/queue.hpp>
 	<boost/thread/thread.hpp>
 	<boost/asio/io_service.hpp>
 	<boost/atomic.hpp>
+	"InlineHelper.h"
 	"InterruptableThread.h"
 	"IRestRequest.h"
 	"SensorBehavior.h"
@@ -9037,7 +9038,7 @@
 	"pplx/pplxtasks.h"
 	"cpprest/details/basic_types.h"
 
-1449244276 source:/home/manini/Documents/SKC/SKC/SKCLib/SensorManager.cpp
+1449245807 source:/home/manini/Documents/SKC/SKC/SKCLib/SensorManager.cpp
 	<pthread.h>
 	<boost/bind.hpp>
 	<boost/type_traits/is_base_of.hpp>

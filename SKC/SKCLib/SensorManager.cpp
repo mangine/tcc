@@ -23,6 +23,8 @@ void SensorManager::Finished(){
 //checks sensors, is a thread call
 void SensorManager::Update(){
     long ms_to_next=0;
+    //cout << "Sensor count: " << _sensors.size() << endl;
+
     for (std::vector<Sensor>::iterator it = _sensors.begin(); it != _sensors.end(); ++it){
         ms_to_next = (*it)._gs->GetSensorUpdateDelay() - InlineHelper::GetMillisecondsSince(&(*it)._lastRun);
         boost::posix_time::ptime c_next = InlineHelper::GetTime(ms_to_next);
@@ -40,6 +42,7 @@ void SensorManager::Update(){
  //       }
     }
     ms_to_next = -InlineHelper::GetMillisecondsSince(&_t_next_sensor);
+    //if(ms_to_next > 600000) ms_to_next = 600000; //max of 10minutes beofre checking again
     if(ms_to_next > 5000 && GetRunningSensorCount()==0 && _queue->empty()){
         cout << "[SensorManager] Stopping all threads, no sensor and net activity for the next " << ms_to_next << " milliseconds." << endl;
         InterruptableThread::PauseAllThreads(ms_to_next - 4000); //vai se pausar!!!! cuidado!
@@ -123,7 +126,6 @@ void SensorManager::SensorThread(Sensor * s){
 		s->_status = SensorStatus::undefined;
 	}
 
-    cout << "Itens em rs: " << rs.size() << endl;
 	//add requests to client queue
 	for (std::vector<IRestRequest*>::iterator it = rs.begin(); it != rs.end(); ++it) _queue->add((*it));
 

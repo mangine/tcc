@@ -15,6 +15,11 @@ using namespace std;
 
 int main()
 {
+
+    //cout << "Test finished, sleeping for 20s before launching program..." << endl << endl<< endl;
+    //sleep(20);
+
+
     skc::RESTQueue rq(16);
     skc::SensorManager sm(&rq);
     skc::RESTClient rc(&rq);
