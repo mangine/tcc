@@ -35,7 +35,7 @@ public:
         int tries = 0;
         skc::CyberPhysicalDescriptor cpd;
 
-        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/",cpd);
+        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://52.34.36.40:1026/",cpd);
 
         while(!dht->read() && tries < 3) tries++;
         if(tries >= 3) return ret;

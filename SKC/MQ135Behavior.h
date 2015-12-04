@@ -32,7 +32,7 @@ public:
 
         vector<IRestRequest*> ret = vector<IRestRequest*>();
         skc::CyberPhysicalDescriptor cpd;
-        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/",cpd);
+        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://52.34.36.40:1026/",cpd);
         urs->AddData("AmoniaPPM",mq->getPPM());
 //        urs->SetCallback(boost::bind(&test_behavior::teste_callback,this,_1));
         ret.push_back((IRestRequest*)urs);
