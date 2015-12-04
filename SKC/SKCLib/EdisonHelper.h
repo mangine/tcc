@@ -2,7 +2,7 @@
 #define EDISONHELPER_H_INCLUDED
 
 class EdisonHelper{
-
+public:
     static void DisableWiFi(){
         system("systemctl stop wpa_supplicant");
     }
