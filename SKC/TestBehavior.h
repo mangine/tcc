@@ -1,0 +1,8 @@
+#ifndef TESTBEHAVIOR_H_INCLUDED
+#define TESTBEHAVIOR_H_INCLUDED
+
+#include "SKCLib/SensorBehavior.h"
+
+
+
+#endif // TESTBEHAVIOR_H_INCLUDED

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SKC" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SKC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="/home/manini/casablanca/Release/include" />
+					<Add directory="/usr/include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SKC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/home/manini/casablanca/Release/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-pthread" />
+			<Add option="-lboost_system" />
+			<Add option="-lboost_thread" />
+			<Add option="-lboost_filesystem" />
+			<Add option="-lboost_date_time" />
+			<Add option="-lcpprest" />
+			<Add directory="/home/manini/casablanca/Release/build.release/Binaries" />
+		</Linker>
+		<Unit filename="DHTBehavior.h" />
+		<Unit filename="MQ135Behavior.h" />
+		<Unit filename="SKCLib/CyberPhysicalDescriptor.h" />
+		<Unit filename="SKCLib/EdisonHelper.h" />
+		<Unit filename="SKCLib/HaltableImpl_Driver.h" />
+		<Unit filename="SKCLib/IHaltable.h" />
+		<Unit filename="SKCLib/IRestRequest.h" />
+		<Unit filename="SKCLib/InlineHelper.h" />
+		<Unit filename="SKCLib/InterruptableThread.cpp" />
+		<Unit filename="SKCLib/InterruptableThread.h" />
+		<Unit filename="SKCLib/OrionConvenienceQueryRequest.h" />
+		<Unit filename="SKCLib/OrionQueryContextRequest.h" />
+		<Unit filename="SKCLib/OrionRestRequest.cpp" />
+		<Unit filename="SKCLib/OrionRestRequest.h" />
+		<Unit filename="SKCLib/OrionSubscribeContextRequest.h" />
+		<Unit filename="SKCLib/OrionUnsubscribeContextRequest.h" />
+		<Unit filename="SKCLib/OrionUpdateContextRequest.h" />
+		<Unit filename="SKCLib/OrionUpdateContextSubscriptionRequest.h" />
+		<Unit filename="SKCLib/PowerPin.h" />
+		<Unit filename="SKCLib/RESTClient.cpp" />
+		<Unit filename="SKCLib/RESTClient.h" />
+		<Unit filename="SKCLib/RESTQueue.h" />
+		<Unit filename="SKCLib/SKCLib.cpp" />
+		<Unit filename="SKCLib/SensorBehavior.h" />
+		<Unit filename="SKCLib/SensorManager.cpp" />
+		<Unit filename="SKCLib/SensorManager.h" />
+		<Unit filename="SKCLib/TestBehavior.h" />
+		<Unit filename="SKCLib/Vectors.h" />
+		<Unit filename="SKCLib/ZigBeehavior.h" />
+		<Unit filename="SKCLib/skc.h" />
+		<Unit filename="Sensors/DHT.cpp" />
+		<Unit filename="Sensors/DHT.h" />
+		<Unit filename="Sensors/MFRC522_mraa.cpp" />
+		<Unit filename="Sensors/mfrc522_mraa.h" />
+		<Unit filename="Sensors/mq135.cpp" />
+		<Unit filename="Sensors/mq135.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
