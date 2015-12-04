@@ -1,20 +1,20 @@
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/main.cpp -o obj/Debug/main.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/main.cpp -o obj/Debug/main.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/Sensors/DHT.cpp -o obj/Debug/Sensors/DHT.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/Sensors/DHT.cpp -o obj/Debug/Sensors/DHT.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/Sensors/MFRC522_mraa.cpp -o obj/Debug/Sensors/MFRC522_mraa.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/Sensors/MFRC522_mraa.cpp -o obj/Debug/Sensors/MFRC522_mraa.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/Sensors/mq135.cpp -o obj/Debug/Sensors/mq135.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/Sensors/mq135.cpp -o obj/Debug/Sensors/mq135.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/InterruptableThread.cpp -o obj/Debug/SKCLib/InterruptableThread.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/InterruptableThread.cpp -o obj/Debug/SKCLib/InterruptableThread.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/OrionRestRequest.cpp -o obj/Debug/SKCLib/OrionRestRequest.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/OrionRestRequest.cpp -o obj/Debug/SKCLib/OrionRestRequest.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/RESTClient.cpp -o obj/Debug/SKCLib/RESTClient.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/RESTClient.cpp -o obj/Debug/SKCLib/RESTClient.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/SensorManager.cpp -o obj/Debug/SKCLib/SensorManager.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/SensorManager.cpp -o obj/Debug/SKCLib/SensorManager.o
 
-g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/SKCLib.cpp -o obj/Debug/SKCLib/SKCLib.o
+g++ -D__MRAA__ -D__EDISON__ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/SKCLib.cpp -o obj/Debug/SKCLib/SKCLib.o
 
 g++ -L/usr/lib/ -L/home/root/boost_1_54_0/stage/lib/ -L/home/root/casablanca/Release/build.release/Binaries/ -o bin/Debug/SKC obj/Debug/main.o obj/Debug/Sensors/DHT.o obj/Debug/Sensors/MFRC522_mraa.o obj/Debug/Sensors/mq135.o obj/Debug/SKCLib/InterruptableThread.o obj/Debug/SKCLib/OrionRestRequest.o obj/Debug/SKCLib/RESTClient.o obj/Debug/SKCLib/SensorManager.o obj/Debug/SKCLib/SKCLib.o  -pthread -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lcpprest  
 
