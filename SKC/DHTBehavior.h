@@ -11,7 +11,7 @@ private:
     DHT * dht = NULL;
 
 public:
-    DHTBehavior(uint8_t inpin,uint8_t outpin, uint8_t powerPin, string id, int delay, int repeat) : SensorBehavior("MQ135",id), PowerPin(powerPin){
+    DHTBehavior(uint8_t inpin,uint8_t outpin, uint8_t powerPin, string id, int delay, int repeat) : SensorBehavior("DHT",id), PowerPin(powerPin){
         cout << "[" << GetName() << "::" << GetID() <<  "] Constructing..." << endl;
 
         dht = new DHT(inpin,outpin,11);

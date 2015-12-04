@@ -22,7 +22,7 @@ void SensorManager::Finished(){
 
 //checks sensors, is a thread call
 void SensorManager::Update(){
-    long ms_to_next;
+    long ms_to_next=0;
     for (std::vector<Sensor>::iterator it = _sensors.begin(); it != _sensors.end(); ++it){
         ms_to_next = (*it)._gs->GetSensorUpdateDelay() - InlineHelper::GetMillisecondsSince(&(*it)._lastRun);
         boost::posix_time::ptime c_next = InlineHelper::GetTime(ms_to_next);
@@ -137,6 +137,8 @@ SensorManager::SensorManager(RESTQueue * queue){
 	_sensors.reserve(8); //reserve space for 8 sensors, will hardly ever reach 8
 	_queue = queue;
 	_work = new boost::asio::io_service::work(_io_service);
+
+    _t_next_sensor = boost::posix_time::pos_infin;
 
 	//setup threads for threadpool
 	for(int i=0; i<4; i++) _threadpool.create_thread(boost::bind(static_cast<size_t (boost::asio::io_service::*)()>(&boost::asio::io_service::run), &_io_service));

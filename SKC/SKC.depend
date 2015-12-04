@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1449171367 source:/home/manini/Documents/SKC/SKC/main.cpp
+1449243828 source:/home/manini/Documents/SKC/SKC/main.cpp
 	<iostream>
 	"SKCLib/OrionRestRequest.h"
 	"SKCLib/RESTQueue.h"
@@ -7795,7 +7795,7 @@
 	<linux/version.h>
 	<unistd.h>
 
-1447703770 /usr/include/linux/version.h
+1448944062 /usr/include/linux/version.h
 
 1403323484 /usr/include/boost/asio/async_result.hpp
 	<boost/asio/detail/config.hpp>
@@ -8984,7 +8984,7 @@
 1448542517 /home/manini/Documents/SKC/SKC/SKCLib/IHaltable.h
 	"skc.h"
 
-1449167695 /home/manini/Documents/SKC/SKC/SKCLib/TestBehavior.h
+1449243184 /home/manini/Documents/SKC/SKC/SKCLib/TestBehavior.h
 	"SensorBehavior.h"
 	"IRestRequest.h"
 	"OrionRestRequest.h"
@@ -9005,22 +9005,23 @@
 	<mraa.h>
 	<time.h>
 
-1449167978 source:/home/manini/Documents/SKC/SKC/Sensors/MFRC522_mraa.cpp
+1449228213 source:/home/manini/Documents/SKC/SKC/Sensors/MFRC522_mraa.cpp
 	"mfrc522_mraa.h"
 
 1449168010 /home/manini/Documents/SKC/SKC/Sensors/mfrc522_mraa.h
 	"mraa.hpp"
 	<string>
 
-1449167985 source:/home/manini/Documents/SKC/SKC/Sensors/mq135.cpp
-	"MQ135.h"
+1449233196 source:/home/manini/Documents/SKC/SKC/Sensors/mq135.cpp
+	"mq135.h"
 
 1448908255 source:/home/manini/Documents/SKC/SKC/SKCLib/OrionRestRequest.cpp
 	"OrionRestRequest.h"
 
-1449165719 source:/home/manini/Documents/SKC/SKC/SKCLib/RESTClient.cpp
+1449233337 source:/home/manini/Documents/SKC/SKC/SKCLib/RESTClient.cpp
 	"skc.h"
 	"RESTClient.h"
+	"EdisonHelper.h"
 	<cpprest/filestream.h>
 	<boost/function.hpp>
 	<cpprest/json.h>
@@ -9036,7 +9037,7 @@
 	"pplx/pplxtasks.h"
 	"cpprest/details/basic_types.h"
 
-1449169215 source:/home/manini/Documents/SKC/SKC/SKCLib/SensorManager.cpp
+1449244276 source:/home/manini/Documents/SKC/SKC/SKCLib/SensorManager.cpp
 	<pthread.h>
 	<boost/bind.hpp>
 	<boost/type_traits/is_base_of.hpp>
@@ -9811,7 +9812,7 @@
 1449227440 source:/home/manini/Documents/SKC/SKC/SKCLib/InterruptableThread.cpp
 	"InterruptableThread.h"
 
-1449171081 /home/manini/Documents/SKC/SKC/MQ135Behavior.h
+1449235967 /home/manini/Documents/SKC/SKC/MQ135Behavior.h
 	"SKCLib/SensorBehavior.h"
 	"Sensors/mq135.h"
 	"SKCLib/PowerPin.h"
@@ -9820,10 +9821,13 @@
 	<mraa.h>
 	<math.h>
 
-1449168529 /home/manini/Documents/SKC/SKC/SKCLib/PowerPin.h
+1449233959 /home/manini/Documents/SKC/SKC/SKCLib/PowerPin.h
+	"mraa.h"
 
-1449171311 /home/manini/Documents/SKC/SKC/DHTBehavior.h
+1449242357 /home/manini/Documents/SKC/SKC/DHTBehavior.h
 	"SKCLib/SensorBehavior.h"
 	"Sensors/DHT.h"
 	"SKCLib/PowerPin.h"
+
+1449244135 /home/manini/Documents/SKC/SKC/SKCLib/EdisonHelper.h
 

@@ -39,7 +39,7 @@ public:
 
 //        ors->SetCallback(boost::function<void(web::http::http_response)>(teste_callback));
 
-
+        return vector<IRestRequest*>();
         return ret;
 
     } //call right after turning device on
