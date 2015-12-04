@@ -2,8 +2,10 @@
 #ifndef POWERPIN_H_INCLUDED
 #define POWERPIN_H_INCLUDED
 
+#include "mraa.h"
+
 class PowerPin{
-    mraa_gpio_context p;
+    mraa_gpio_context p = NULL;
 
     PowerPin(uint8_t pin){
         p = mraa_gpio_init(pin);
@@ -14,14 +16,16 @@ class PowerPin{
         mraa_gpio_close(p);
     }
 
-    PowerUp(){
-        mraa_gpio_write(mraa_gpio_context,1);
+    void PowerUp(){
+        if(p==NULL) return;
+        mraa_gpio_write(p,1);
     }
 
-    PowerDown(){
-        mraa_gpio_write(mraa_gpio_context,0);
+    void PowerDown(){
+        if(p==NULL) return;
+        mraa_gpio_write(p,0);
     }
-}
+};
 
 #endif // POWERPIN_H_INCLUDED
 #endif

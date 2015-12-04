@@ -1,6 +1,9 @@
 #include "skc.h"
 #include "RESTClient.h"
 
+#ifdef __EDISON__
+#include "EdisonHelper.h"
+#endif // __EDISON__
 
 #include <cpprest/filestream.h>
 #include <boost/function.hpp>
