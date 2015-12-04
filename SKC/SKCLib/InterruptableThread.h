@@ -80,8 +80,8 @@ public:
     virtual void Update(){}; //thread thread
     virtual void Start(){}; //thread start call
     virtual void Finished(){};
-    virtual void OnPause(); //just before pausing
-    virtual void OnResume(); //just after resuming
+    virtual void OnPause(){}; //just before pausing
+    virtual void OnResume(){}; //just after resuming
 };
 /*
 vector<InterruptableThread*> InterruptableThread::_threadObjs = vector<InterruptableThread *>();

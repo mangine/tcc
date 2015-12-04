@@ -1603,7 +1603,7 @@ bool MFRC522::MIFARE_OpenUidBackdoor(bool logErrors) {
 	PICC_HaltA(); // 50 00 57 CD
 
 	byte cmd = 0x40;
-	byte validBits = 7; /* Our command is only 7 bits. After receiving card response,
+	byte validBits = 7;  Our command is only 7 bits. After receiving card response,
 						  this will contain amount of valid response bits. */
 	/*byte response[32]; // Card's response is written here
 	byte received;

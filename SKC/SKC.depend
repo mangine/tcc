@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1449167447 source:/home/manini/Documents/SKC/SKC/main.cpp
+1449171367 source:/home/manini/Documents/SKC/SKC/main.cpp
 	<iostream>
 	"SKCLib/OrionRestRequest.h"
 	"SKCLib/RESTQueue.h"
 	"SKCLib/RESTClient.h"
 	"SKCLib/SensorManager.h"
 	"SKCLib/TestBehavior.h"
+	"MQ135Behavior.h"
+	"DHTBehavior.h"
 
 1449164642 /home/manini/Documents/SKC/SKC/SKCLib/OrionRestRequest.h
 	<string.h>
@@ -7738,17 +7740,18 @@
 
 1403323483 /usr/include/boost/detail/atomic_redef_macros.hpp
 
-1449149822 /home/manini/Documents/SKC/SKC/SKCLib/RESTClient.h
+1449227620 /home/manini/Documents/SKC/SKC/SKCLib/RESTClient.h
 	<string.h>
 	<boost/lockfree/queue.hpp>
 	<cpprest/http_client.h>
 	<boost/static_assert.hpp>
 	<boost/thread.hpp>
+	<boost/atomic.hpp>
 	"InterruptableThread.h"
 	"IRestRequest.h"
 	"RESTQueue.h"
 
-1449166823 /home/manini/Documents/SKC/SKC/SKCLib/InterruptableThread.h
+1449228337 /home/manini/Documents/SKC/SKC/SKCLib/InterruptableThread.h
 	<signal.h>
 	<boost/bind.hpp>
 	<boost/thread.hpp>
@@ -9033,7 +9036,7 @@
 	"pplx/pplxtasks.h"
 	"cpprest/details/basic_types.h"
 
-1449167409 source:/home/manini/Documents/SKC/SKC/SKCLib/SensorManager.cpp
+1449169215 source:/home/manini/Documents/SKC/SKC/SKCLib/SensorManager.cpp
 	<pthread.h>
 	<boost/bind.hpp>
 	<boost/type_traits/is_base_of.hpp>
@@ -9805,6 +9808,22 @@
 	"SensorManager.h"
 	"TestBehavior.h"
 
-1449166775 source:/home/manini/Documents/SKC/SKC/SKCLib/InterruptableThread.cpp
+1449227440 source:/home/manini/Documents/SKC/SKC/SKCLib/InterruptableThread.cpp
 	"InterruptableThread.h"
+
+1449171081 /home/manini/Documents/SKC/SKC/MQ135Behavior.h
+	"SKCLib/SensorBehavior.h"
+	"Sensors/mq135.h"
+	"SKCLib/PowerPin.h"
+
+1449168028 /home/manini/Documents/SKC/SKC/Sensors/mq135.h
+	<mraa.h>
+	<math.h>
+
+1449168529 /home/manini/Documents/SKC/SKC/SKCLib/PowerPin.h
+
+1449171311 /home/manini/Documents/SKC/SKC/DHTBehavior.h
+	"SKCLib/SensorBehavior.h"
+	"Sensors/DHT.h"
+	"SKCLib/PowerPin.h"
 

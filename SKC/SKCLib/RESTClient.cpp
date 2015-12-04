@@ -11,18 +11,24 @@ namespace skc{
 
 boost::atomic<int> RESTClient::_instances(0);
 
-void Start(){
+void RESTClient::Start(){
     _instances.fetch_add(1,boost::memory_order_relaxed);
 }
 
-void OnPause(){
-    _instances.fetch_sub(1,boost::memory_order_relaxed);
-    //EdisonHelper::DisableWiFi();
+void RESTClient::OnPause(){
+    int instances = _instances.fetch_sub(1,boost::memory_order_relaxed);
+    if(instances==0){
+        #ifdef __EDISON__
+        EdisonHelper::DisableWiFi();
+        #endif // __EDISON__
+    }
 }
 
-void OnResume(){
+void RESTClient::OnResume(){
     _instances.fetch_add(1,boost::memory_order_relaxed);
-    //EdisonHelper::EnableWiFi();
+    #ifdef __EDISON__
+    EdisonHelper::EnableWiFi();
+    #endif // __EDISON__
 }
 
 bool RESTClient::CanLaunch(){
