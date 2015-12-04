@@ -31,11 +31,11 @@ public:
 
         cout << "[" << GetName() << "::" << GetID() <<  "] Reading..." << endl;
 
-        vector<IRestRequest*> ret();
+        vector<IRestRequest*> ret = vector<IRestRequest*>();
         int tries = 0;
         skc::CyberPhysicalDescriptor cpd;
 
-        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/post.php?dir=/",cpd);
+        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/",cpd);
 
         while(!dht->read() && tries < 3) tries++;
         if(tries >= 3) return ret;

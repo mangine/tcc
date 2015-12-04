@@ -30,9 +30,9 @@ public:
         cout << "[" << GetName() << "::" << GetID() <<  "] Reading..." << endl;
 
 
-        vector<IRestRequest*> ret();
+        vector<IRestRequest*> ret = vector<IRestRequest*>();
         skc::CyberPhysicalDescriptor cpd;
-        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/post.php?dir=/",cpd);
+        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/",cpd);
         urs->AddData("AmoniaPPM",mq->getCorrectedPPM());
 //        urs->SetCallback(boost::bind(&test_behavior::teste_callback,this,_1));
         ret.push_back((IRestRequest*)urs);
