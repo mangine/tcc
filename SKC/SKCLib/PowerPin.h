@@ -5,8 +5,10 @@
 #include "mraa.h"
 
 class PowerPin{
+private:
     mraa_gpio_context p = NULL;
 
+public:
     PowerPin(uint8_t pin){
         p = mraa_gpio_init(pin);
         mraa_gpio_dir(p, MRAA_GPIO_OUT_LOW);
