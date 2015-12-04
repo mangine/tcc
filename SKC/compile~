@@ -16,5 +16,5 @@ g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boo
 
 g++ -std=c++11 -Wall -fexceptions -std=c++11 -g -I/usr/include/ -I/home/root/boost_1_54_0/ -I/home/root/casablanca/Release/include/ -c /home/root/tcc2/SKC/SKC/SKCLib/SKCLib.cpp -o obj/Debug/SKCLib/SKCLib.o
 
-g++ -L/home/manini/casablanca/Release/build.release/Binaries -o bin/Debug/SKC obj/Debug/main.o obj/Debug/Sensors/DHT.o obj/Debug/Sensors/MFRC522_mraa.o obj/Debug/Sensors/mq135.o obj/Debug/SKCLib/InterruptableThread.o obj/Debug/SKCLib/OrionRestRequest.o obj/Debug/SKCLib/RESTClient.o obj/Debug/SKCLib/SensorManager.o obj/Debug/SKCLib/SKCLib.o  -pthread -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lcpprest  
+g++ -L/usr/lib/ -L/home/root/boost_1_54_0/stage/lib/ -L/home/root/casablanca/Release/build.release/Binaries/ -o bin/Debug/SKC obj/Debug/main.o obj/Debug/Sensors/DHT.o obj/Debug/Sensors/MFRC522_mraa.o obj/Debug/Sensors/mq135.o obj/Debug/SKCLib/InterruptableThread.o obj/Debug/SKCLib/OrionRestRequest.o obj/Debug/SKCLib/RESTClient.o obj/Debug/SKCLib/SensorManager.o obj/Debug/SKCLib/SKCLib.o  -pthread -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lcpprest  
 
