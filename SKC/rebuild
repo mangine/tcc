@@ -1,0 +1,14 @@
+rm error_*
+rm bin -r
+rm obj -r
+
+mkdir bin
+mkdir obj
+mkdir bin/Debug
+mkdir obj/Debug
+
+mkdir bin/Debug/SKCLib
+mkdir obj/Debug/SKCLib
+mkdir bin/Debug/Sensors
+mkdir obj/Debug/Sensors
+
