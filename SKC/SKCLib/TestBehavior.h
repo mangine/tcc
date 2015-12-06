@@ -4,6 +4,8 @@
 #include "OrionUpdateContextRequest.h"
 #include "CyberPhysicalDescriptor.h"
 
+#include "../globals.h"
+
 using namespace skc;
 using namespace skc::RESTRequest;
 
@@ -23,8 +25,8 @@ public:
 
 
         skc::CyberPhysicalDescriptor cpd;
-        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://posttestserver.com/post.php?dir=/",cpd);
-        urs->AddData("valorfloat",10.5f);
+        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest(_orionURL,cpd);
+        urs->AddData("testvalue",10.5f);
         urs->SetCallback(boost::bind(&test_behavior::teste_callback,this,_1));
         ret.push_back((IRestRequest*)urs);
 
@@ -39,7 +41,7 @@ public:
 
 //        ors->SetCallback(boost::function<void(web::http::http_response)>(teste_callback));
 
-        return vector<IRestRequest*>();
+        //return vector<IRestRequest*>();
         return ret;
 
     } //call right after turning device on

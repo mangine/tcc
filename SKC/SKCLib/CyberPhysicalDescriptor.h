@@ -10,15 +10,20 @@ namespace skc{
 
 using namespace std;
 
-struct CyberPhysicalDescriptor{
+class CyberPhysicalDescriptor{
+public:
 	utility::string_t type= utility::string_t("");
 	utility::string_t name = utility::string_t("");
 	utility::string_t id = utility::string_t("");
 	utility::string_t parentName = utility::string_t("");
 	utility::string_t parentId = utility::string_t("");
 	bool isPattern=false;
+
+    static CyberPhysicalDescriptor * _default_cpd;
+
 };
-typedef struct CyberPhysicalDescriptor CyberPhysicalDescriptor;
+
+
 
 };
 

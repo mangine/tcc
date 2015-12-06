@@ -2,9 +2,12 @@
 #ifndef MQ135BEHAVIOR_H_INCLUDED
 #define MQ135BEHAVIOR_H_INCLUDED
 
+#include "SKCLib/CyberPhysicalDescriptor.h"
 #include "SKCLib/SensorBehavior.h"
 #include "Sensors/mq135.h"
 #include "SKCLib/PowerPin.h"
+
+#include "globals.h"
 
 class MQ135Behavior : public SensorBehavior, PowerPin{
 private:
@@ -32,7 +35,7 @@ public:
 
         vector<IRestRequest*> ret = vector<IRestRequest*>();
         skc::CyberPhysicalDescriptor cpd;
-        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://52.34.36.40:1026/",cpd);
+        OrionUpdateContextRequest * urs = new OrionUpdateContextRequest(_orionURL,cpd);
         urs->AddData("AmoniaPPM",mq->getPPM());
 //        urs->SetCallback(boost::bind(&test_behavior::teste_callback,this,_1));
         ret.push_back((IRestRequest*)urs);

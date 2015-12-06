@@ -19,7 +19,6 @@
 #define REST_SERVER_DELETE "http://teste-nodered-futurecu.mybluemix.net/red/delete/"
 
 namespace skc{
-
     namespace RESTRequest{}; //premade rest requests
     namespace Behavior{}; //premade sensors
 
