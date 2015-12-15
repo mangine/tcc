@@ -39,8 +39,9 @@ private:
 
 
 	mraa_aio_context _pin;
+	mraa_gpio_context _flag;
 public:
-	MQ135(uint8_t pin);
+	MQ135(uint8_t pin, bool digital=true);
 	float getCorrectionFactor(float t, float h);
 	float getResistance();
 	float getCorrectedResistance(float t, float h);
@@ -48,6 +49,7 @@ public:
 	float getCorrectedPPM(float t, float h);
 	float getRZero();
 	float getCorrectedRZero(float t, float h);
+    int ReadFlag();
 
 };
 

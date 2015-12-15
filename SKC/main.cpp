@@ -115,8 +115,8 @@ int main(int argc, char** argv)
 
 
     #ifdef __MRAA__
-    MQ135Behavior * m = new (sm.AddSensor<MQ135Behavior>())MQ135Behavior(1,8,"id1",60000,300000);
-    DHTBehavior * d = new (sm.AddSensor<DHTBehavior>())DHTBehavior(2,3,9,"id1",1000,60000);
+    MQ135Behavior * m = new (sm.AddSensor<MQ135Behavior>())MQ135Behavior(6,7,"id1",60000,300000);
+    DHTBehavior * d = new (sm.AddSensor<DHTBehavior>())DHTBehavior(8,9,10,"id1",2000,60000);
     #else
     test_behavior * t = new (sm.AddSensor<test_behavior>())test_behavior("60s-start-5m-update",60000,300000);
     test_behavior * t2 = new (sm.AddSensor<test_behavior>())test_behavior("1s-start-1m-update",1000,60000);

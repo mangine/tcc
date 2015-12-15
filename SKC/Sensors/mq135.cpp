@@ -21,9 +21,16 @@ v1.0 - First release
 */
 /**************************************************************************/
 
-MQ135::MQ135(uint8_t pin) {
-	_pin = mraa_aio_init(pin);
+MQ135::MQ135(uint8_t pin, bool digital) {
+	if(digital){
+        _flag = mraa_gpio_init(pin);
+	}else{
+        _pin = mraa_aio_init(pin);
+	}
+
+
 }
+
 
 
 /**************************************************************************/
@@ -109,5 +116,8 @@ float MQ135::getCorrectedRZero(float t, float h) {
 	return getCorrectedResistance(t, h) * pow((ATMOCO2 / PARA), (1. / PARB));
 }
 
+int ReadFlag(){
+    return mraa_gpio_read(_flag);
+}
 
 #endif

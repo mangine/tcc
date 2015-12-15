@@ -82,6 +82,7 @@
 		<Unit filename="Sensors/mfrc522_mraa.h" />
 		<Unit filename="Sensors/mq135.cpp" />
 		<Unit filename="Sensors/mq135.h" />
+		<Unit filename="globals.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

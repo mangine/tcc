@@ -69,6 +69,9 @@ pplx::task<void> RESTClient::_send_request_task(IRestRequest * r)
                 cout << "-ENDED REQUEST. Calling function: " << (r->hasCallback()) << endl;
                 r->InvokeCallback(response);
                 delete r;
+            }).then([=](pplx::task<json::value> t)
+            {
+                return handle_exception(t, events_json_key);
             });
         }
         catch (web::http::http_exception const & e) //possivelmente sem conexao
@@ -78,7 +81,10 @@ pplx::task<void> RESTClient::_send_request_task(IRestRequest * r)
         }
     }else{
         try{
-            client.request(r->GetMethod(), r->GetPath(), r->ToString(), U("application/json"));
+            client.request(r->GetMethod(), r->GetPath(), r->ToString(), U("application/json")).then([=](pplx::task<json::value> t)
+            {
+                return handle_exception(t, events_json_key);
+            });
             delete r;
             return pplx::task_from_result();
         }
@@ -94,6 +100,24 @@ pplx::task<void> RESTClient::_send_request_task(IRestRequest * r)
     return pplx::task_from_result();
 
 }
+
+pplx::task<json::value> RESTClient::handle_exception(pplx::task<json::value>& t, const utility::string_t& field_name)
+{
+    try
+    {
+        t.get();
+    }
+    catch(const std::exception& ex)
+    {
+        json::value error_json = json::value::object();
+        error_json[field_name] = json::value::object();
+        error_json[field_name][error_json_key] = json::value::string(utility::conversions::to_string_t(ex.what()));
+        return pplx::task_from_result<json::value>(error_json);
+    }
+
+    return t;
+}
+
 
 void RESTClient::Update(){
     ///TODO testar condition variable

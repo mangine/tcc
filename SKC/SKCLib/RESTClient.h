@@ -21,6 +21,7 @@ private:
     const string _host;
 	RESTQueue * _queue = NULL;
 	pplx::task<void> _send_request_task(IRestRequest * r);
+	pplx::task<json::value> handle_exception(pplx::task<json::value>& t, const utility::string_t& field_name);
     static boost::atomic<int> _instances;
 public:
     RESTClient();

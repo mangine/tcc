@@ -5,12 +5,12 @@ class EdisonHelper{
 public:
     static void DisableWiFi(){
         cout << "[EdisonHelper] Shutting down WiFi" << endl;
-        system("systemctl stop wpa_supplicant");
+        //system("systemctl stop wpa_supplicant");
     }
 
     static void EnableWiFi(){
         cout << "[EdisonHelper] Powering up WiFi" << endl;
-        system("systemctl restart wpa_supplicant");
+        //system("systemctl restart wpa_supplicant");
     }
 
     static void EnableBluetooth(){
