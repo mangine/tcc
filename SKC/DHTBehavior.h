@@ -41,11 +41,13 @@ public:
 
         OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://52.34.36.40:1026/",cpd);
 
-        while(!dht->read() && tries < 3) tries++;
+        //dht->read();
 
 
-        urs->AddData("Humidity",dht->readHumidity());
-        urs->AddData("Temperature",dht->readTemperature());
+        /*urs->AddData("Humidity",dht->readHumidity());
+        urs->AddData("Temperature",dht->readTemperature());*/
+        urs->AddData("Humidity",64);
+        urs->AddData("Temperature",8);
         ret.push_back((IRestRequest*)urs);
 
         cout << "[" << GetName() << "::" << GetID() <<  "] Updating..." << endl;
