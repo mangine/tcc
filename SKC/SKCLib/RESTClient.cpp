@@ -128,7 +128,7 @@ void RESTClient::Update(){
         boost::mutex::scoped_lock lock(*GetMutex());
         _queue->GetNotEmptyConditionVariable()->wait(lock);
     }
-    //cout << "Item count: " << _queue->size();
+    cout << "NET QUEUE SIZE: " << _queue->size();
     //preserva valor, pois pode ser usado depois num callback
     _queue->consume_preserve(boost::bind(&RESTClient::_send_request_task,this,_1)); //_queue->consume(boost::bind(&RESTClient::_send_request_task,*this,_1));
 }

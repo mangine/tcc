@@ -34,11 +34,14 @@ public:
         vector<IRestRequest*> ret = vector<IRestRequest*>();
         int tries = 0;
         skc::CyberPhysicalDescriptor cpd;
+        cpd.id = "Pote1";
+        cpd.isPattern= false;
+        cpd.name = "Pote1";
+        cpd.type = "Pote";
 
         OrionUpdateContextRequest * urs = new OrionUpdateContextRequest("http://52.34.36.40:1026/",cpd);
 
         while(!dht->read() && tries < 3) tries++;
-        if(tries >= 3) return ret;
 
 
         urs->AddData("Humidity",dht->readHumidity());

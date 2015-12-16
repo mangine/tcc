@@ -27,7 +27,7 @@ public:
         SetMethod(web::http::methods::POST);
 
         _data["contextElements"] = web::json::value::array();
-        _data["UpdateAction"] = web::json::value::string(U("UPDATE")); //ou append, mas na versao atual no orion nao importa
+        _data["updateAction"] = web::json::value::string(U("UPDATE")); //ou append, mas na versao atual no orion nao importa
         AddContext(cpd);
     }
 

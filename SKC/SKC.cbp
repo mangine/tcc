@@ -48,6 +48,7 @@
 		</Linker>
 		<Unit filename="DHTBehavior.h" />
 		<Unit filename="MQ135Behavior.h" />
+		<Unit filename="SKCLib/ADCReader.h" />
 		<Unit filename="SKCLib/CyberPhysicalDescriptor.h" />
 		<Unit filename="SKCLib/EdisonHelper.h" />
 		<Unit filename="SKCLib/HaltableImpl_Driver.h" />
